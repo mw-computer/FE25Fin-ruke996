@@ -1,5 +1,52 @@
-@
+/* nav 바 감싸는 wrapper */
+.top-nav {
+    position: relative;
+    z-index: 1;
+    /* 메뉴보다 낮은 z-index로 설정 */
+}
 
-* {
-	
+/* 메뉴 영역 설정 */
+.top-nav .container {
+    display: flex;
+    background-color: #000;
+    padding: 10px 20px;
+    gap: 20px;
+    position: relative;
+    /* 자식 드롭다운 기준점 */
+    z-index: 10;
+}
+
+/* 상단 메뉴 */
+.top-nav .container>a {
+    color: white;
+    padding: 10px 20px;
+    background: #000;
+    border-radius: 6px;
+    position: relative;
+    z-index: 10;
+}
+
+/* 드롭다운 메뉴 */
+.top-nav .container>ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* 부모 a 태그 바로 아래 */
+    background-color: #444;
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 999;
+    /* 최상단에 위치 */
+}
+
+/* 드롭다운 항목 */
+.top-nav .container>ul>li>a {
+    display: block;
+    padding: 8px 20px;
+    color: white;
+}
+
+/* hover 시 보여짐 */
+.top-nav .container>a:hover+ul {
+    display: block;
 }
