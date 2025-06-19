@@ -48,7 +48,7 @@
     height: 100%;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, .3);
-    background: #181c23 url(../../../../../common/tmpl/skinA/img/top.png)no-repeat center;
+    background: #181c23 url(../images/top.png)no-repeat center;
     font-size: 0;
 }
 
@@ -145,7 +145,7 @@
     display: block;
     width: 18px;
     height: 18px;
-    background: url(../../../../../common/tmpl/skinA/img/sns_ir2.png)no-repeat;
+    background: url(../images/sns_ir2.png)no-repeat;
     font-size: 0;
 }
 
@@ -296,7 +296,7 @@
     width: 54px;
     height: 54px;
     border-radius: 50%;
-    background-image: url(../../../../../common/tmpl/skinA/img/quick_ir.png);
+    background-image: url(../images/quick_ir.png);
 }
 
 #foot_layout .quick_menu ul li .tip {
@@ -349,7 +349,7 @@
     content: '';
     width: 60px;
     height: 56px;
-    background: url(../../../../../common/tmpl/skinA/img/quick_icon.png)no-repeat;
+    background: url(../images/quick_icon.png)no-repeat;
     animation: qicon 3s linear forwards;
     -webkit-animation: qicon 3s linear forwards;
 }
