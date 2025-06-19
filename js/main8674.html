@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,width=device-width">
+<link rel="shortcut icon" type="image/x-icon" href="/pcms/common/images/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/pcms/common/images/favicon_152.png">
+<link rel="stylesheet" href="/pcms/common/css/common.css">
+<link rel="stylesheet" href="/pcms/common/pluigs/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="/site/common/css/skin.css">
+<title>Error Page</title>
+
+<script language="javascript">
+function fncGoAfterErrorPage(){
+    history.back(-2);
+}
+</script>
+<style type="text/css">
+html,body {width:100%; height:100%;word-wrap: break-word;}
+.error_wrap {width:100%;min-height:100vh;padding:135px 40px 50px ;background:url(/common/img/error_bg.png)no-repeat center bottom;background-size: cover;text-align:center;}
+.error_wrap h2 {margin: 20px 0;font-size:42px;font-weight:700;color:#222;}
+.error_wrap p {margin: 0 0 45px;font-size:16px;color:#555;}
+.error_wrap .btn_box {margin:50px 0 170px;}
+.error_wrap .btn_box a {text-align:left;}
+.error_wrap .error_fcopy {}
+.error_wrap .error_fcopy p {margin:0; font-size:15px; color:#555;}
+
+@media(max-width:767px){
+	.error_wrap {padding:105px 20px 50px }
+	.error_wrap h2 {font-size:35px;}
+}@media(max-width:540px){
+	.error_wrap .btn_box a {display: block; margin:5px 0;}
+}
+</style>
+</head>
+
+<body>
+
+  <div class="error_wrap">
+	<div class="error_txt">
+		<span><img src="/common/img/error.png" alt="" /></span>
+		<h2>서비스 이용에 불편을 드려<br>대단히 죄송합니다.</h2>
+		<p>
+			찾으시려는 페이지는 주소를 잘못 입력하였거나 페이지 주소의 변경 또는 삭제들의 이유로 페이지를 찾을 수 없습니다. <br>
+			입력하신 페이지의 주소와 경로가 정확한지 한번 더 확인 후 이용하시기 바랍니다.
+		</p>
+
+		<div class="btn_box">
+			
+			<a href="/kr/" class="btn btn-primary btn-icon">대표홈페이지 바로가기<i class="ir ir-bbs ir-home" aria-hidden="true"></i></a>
+			<a href="#" class="btn btn-default btn-icon"  onclick="history.back()">이전 페이지 돌아가기<i class="ir ir-bbs ir-home" aria-hidden="true"></i></a>
+			<!-- <a href="/">대표홈페이지 바로가기</a>
+			<a href="#" onclick="history.back()">이전페이지돌아가기</a> -->
+		</div>
+	</div>
+	<div class="error_fcopy">
+		<p>[35349 ] 대전광역시 서구 도안북로88(도안동, 목원대학교) Tel. 042-829-7114 Fax. 042-829-5020</p>
+		<p>COPYRIGHT© 2020 MOKWON UNIVERSITY. ALL RIGHTS RESERVED.</p>
+	</div>
+  </div>
+
+</body>
+</html>

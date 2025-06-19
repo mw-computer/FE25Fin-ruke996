@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'ridi';
+  font-style: normal;
+  src: url(ridibatang/RIDIBatang.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'ridi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(ridibatang/RIDIBatang.woff) format('woff');
+}
+
+
+.ridi {
+  font-family: "ridi";
+}

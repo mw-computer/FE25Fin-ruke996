@@ -2,73 +2,886 @@
 <html lang="ko">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>웹화면구현:김똘똘-ㅇㅇㅇ클로닝
-		//TODO: 타이틀에 본인 이름 넣기
-	</title>
-	<link rel="stylesheet" href="css/style.css">
+	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta name="viewport"
+		content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,width=device-width">
+	<meta name="author" content="목원대학교">
+	<meta name="keywords" content="목원대학교 ">
+	<meta name="description" content="경계를 넘어 세계로, 함께 성장하는 열린대학 목원대학교">
+	<meta name="copyright" content="대전광역시 서구 도안북로 88 (도안동, 목원대학교)목원대학교">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="컴퓨터공학과">
+	<meta property="og:image" content="../images/logo.png">
+	<meta property="og:description" content="경계를 넘어 세계로, 함께 성장하는 열린대학 목원대학교">
+	<title>컴퓨터공학과</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="images/favicon_152.png">
+
+	<!-- 공통 및 기본 스타일 -->
+	<link rel="stylesheet" href="css/common8674.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/font-exo2.css" />
+	<link rel="stylesheet" href="css/font_ridibatang.css" />
+	<link rel="stylesheet" href="css/acego.ui.min.css" />
+	<link rel="stylesheet" href="css/ir-icon.css" />
+
+	<!-- 헤더/푸터 스타일 -->
+	<link rel="stylesheet" href="css/acego.header8674.css" />
+	<link rel="stylesheet" href="css/acego.footer8674.css" />
+
+	<!-- 메인화면 전용 스타일 -->
+	<link rel="stylesheet" href="css/main9af1.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/tmpl8674.css" />
+	<!-- (필요 시 slick.css 등 추가) -->
+	<link rel="stylesheet" href="css/slick.css">
+
+	<!-- jQuery 및 플러그인 -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jQuery.print.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- 공통 JS 및 UI -->
+	<script src="js/acego.common8674.js"></script>
+	<script src="js/common-scroll.js"></script>
+	<script src="js/common-popup.js"></script>
+	<script src="js/common8674.js"></script>
+	<script src="js/webfont.js"></script>
+	<script src="js/js22.js"></script>
+	<script src="js/acego.gnb.js"></script>
+	<script src="js/acego.snb.js"></script>
+	<script>
+		WebFont.load({
+			custom: {
+				families: ['Noto Sans KR'],
+				urls: ['/pcms/common/font/font_notosanskr.css']
+			}
+		});
+	</script>
+	<script src="js/main8674.html"></script>
+	<script>
+		$(function () {
+			$("[data-print=print]").on('click', function () {
+				$("#txt").print({
+					globalStyles: true,
+					mediaPrint: false,
+					iframe: true,
+					noPrintSelector: ".avoid-this",
+					deferred: $.Deferred().done(function () { console.log('Printing done', arguments); })
+				});
+			});
+		});
+	</script>
+	<!-- Google Ads/Analytics 등 외부 스크립트 필요시 여기에 추가 -->
 </head>
-//TODO: 메뉴 완성하기 (상단메뉴바 또는 사이드메뉴바) + 화면 사이즈에 따라 반응형으로 변경되도록 구현하기
 
 <body>
-	<nav class="top-nav">
-		<div class="container">
-			<a href="#">menu1</a>
-			<ul>
-				<li><a href="#">서브매뉴1</a></li>
-				<li><a href="#">서브매뉴2</a></li>
-				<li><a href="#">서브매뉴3</a></li>
-			</ul>
-			<a href="#">menu2</a>
-			<ul>
-				<li><a href="#">서브매뉴1</a></li>
-				<li><a href="#">서브매뉴2</a></li>
-				<li><a href="#">서브매뉴3</a></li>
-			</ul>
-			<a href="#">menu3</a>
-			<ul>
-				<li><a href="#">서브매뉴1</a></li>
-				<li><a href="#">서브매뉴2</a></li>
-				<li><a href="#">서브매뉴3</a></li>
-			</ul>
+	<!-- 오픈팝업 -->
+	<div id="op_layout" class="on">
+		<!-- ...팝업 내용... -->
+	</div>
+
+	<!-- 헤더 및 네비게이션 -->
+	<header id="top_layout">
+		<div class="top_wrap">
+			<h1 class="logo_wrap" id="logo"><a href="index.html"><span>목원대학교</span><em>컴퓨터공학과</em></a></h1>
+			<div class="right_utile">
+				<ul class="utile_wrap">
+					<li class="n1">
+						<a href="html/sub06/0602d46d.html?mode=LF"><span></span>로그인</a>
+					</li>
+					<li class="n3 box pc">
+						<a id="btnAllmenu" href="https://www.mokwon.ac.kr/common/tmpl/sitepop.php"
+							onclick="ajaxprototyOpen(this,'body'); return false;"><span></span>교내사이트</a>
+					</li>
+					<li class="n5">
+						<a href="html/sub06/0601.html">사이트맵</a>
+					</li>
+					<li class="n4 box mo">
+						<button type="button" class="btn-allmenu " data-toggle="modal"
+							data-target="#mobile-menu">전체메뉴</button>
+					</li>
+				</ul>
+				<div class="popbtn">
+					<div class="button"><a href="https://www.mokwon.ac.kr/view/html/mokwonview.html" target="_blank"
+							title="새창" rel="noopener noreferrer">목원<span>뷰</span></a></div>
+				</div>
+			</div>
 		</div>
-	</nav>
-	<main>
-		<div class="container">
-			<h1>웹화면 구현</h1>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
+		<nav id="gnb_layout">
+			<div id="gnb">
+				<div class="gnb_wrap layout">
+					<ul class="depth1_ul n6">
+						<!-- 1. 학과안내 -->
+						<li class='th1 n1 '>
+							<a href='html/sub01/0101.html' class='th1_lnk'><span>학과안내</span></a>
+							<div class='item'>
+								<div class='gnb-title'><strong>학과안내</strong>
+									<p>MOKWON<br>UNIVERSITY</p>
+								</div>
+								<div class='gnb-depth'>
+									<ul class='depth2_ul'>
+										<li><a href='html/sub01/0101.html' target='_self'><em></em><span>학과소개</span></a>
+										</li>
+										<li><a href='html/sub01/0102.html' target='_self'><em></em><span>연혁</span></a>
+										</li>
+										<li><a href='html/sub01/0103.html'
+												target='_self'><em></em><span>취업과진로</span></a></li>
+										<li><a href='html/sub01/0104.html'
+												target='_self'><em></em><span>특성화전략</span></a></li>
+										<li><a href='html/sub01/0105.html' target='_self'><em></em><span>학과시설</span></a>
+										</li>
+										<li><a href='html/sub01/0106.html' target='_self'><em></em><span>위치 및
+													연락처</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+
+						<!-- 2. 교수소개 -->
+						<li class='th1 n2 '>
+							<a href='html/sub02/0201.html' class='th1_lnk'><span>교수소개</span></a>
+							<div class='item'>
+								<div class='gnb-title'><strong>교수소개</strong>
+									<p>MOKWON<br>UNIVERSITY</p>
+								</div>
+								<div class='gnb-depth'>
+									<ul class='depth2_ul'>
+										<li><a href='html/sub02/0201.html'
+												target='_self'><em></em><span>컴퓨터공학과</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+
+						<!-- 3. 학사안내 -->
+						<li class='th1 n3 '>
+							<a href='html/sub03/0301.html' class='th1_lnk'><span>학사안내</span></a>
+							<div class='item'>
+								<div class='gnb-title'><strong>학사안내</strong>
+									<p>MOKWON<br>UNIVERSITY</p>
+								</div>
+								<div class='gnb-depth'>
+									<ul class='depth2_ul'>
+										<li><a href='html/sub03/0301.html' target='_self'><em></em><span>교과과정</span></a>
+										</li>
+										<li><a href='html/sub03/0302.html'
+												target='_self'><em></em><span>교과목소개</span></a></li>
+										<li><a href='html/sub03/0303.html'
+												target='_self'><em></em><span>졸업요구조건</span></a></li>
+										<li><a href='html/sub03/0304.html' target='_self'><em></em><span>학사일정</span></a>
+										</li>
+										<li><a href='html/sub03/0305.html'
+												target='_self'><em></em><span>직무기술서</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+
+						<!-- 4. 특성화사업 -->
+						<li class='th1 n4 '>
+							<a href='html/sub07/0701.html' class='th1_lnk'><span>특성화사업</span></a>
+							<div class='item'>
+								<div class='gnb-title'><strong>특성화사업</strong>
+									<p>MOKWON<br>UNIVERSITY</p>
+								</div>
+								<div class='gnb-depth'>
+									<ul class='depth2_ul'>
+										<li><a href='html/sub07/0701.html'
+												target='_self'><em></em><span>SW인재양성사업</span></a></li>
+										<li><a href='html/sub07/0702.html' target='_self'><em></em><span>SW전문인재양성사업
+													교육과정</span></a></li>
+										<li><a href='html/sub07/0703.html' target='_self'><em></em><span>IPP사업
+													안내</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+
+						<!-- 5. 학생활동 -->
+						<li class='th1 n5 '>
+							<a href='html/sub04/0401.html' class='th1_lnk'><span>학생활동</span></a>
+							<div class='item'>
+								<div class='gnb-title'><strong>학생활동</strong>
+									<p>MOKWON<br>UNIVERSITY</p>
+								</div>
+								<div class='gnb-depth'>
+									<ul class='depth2_ul'>
+										<li><a href='html/sub04/0401.html' target='_self'><em></em><span>학생회</span></a>
+										</li>
+										<li><a href='html/sub04/0402.html'
+												target='_self'><em></em><span>동아리정보</span></a></li>
+										<li><a href='html/sub04/0403.html'
+												target='_self'><em></em><span>학술제작품</span></a></li>
+										<li><a href='html/sub04/0404.html'
+												target='_self'><em></em><span>교내외수상</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+
+						<!-- 6. 커뮤니티 -->
+						<li class='th1 n6 '>
+							<a href='html/sub05/0501.html' class='th1_lnk'><span>커뮤니티</span></a>
+							<div class='item'>
+								<div class='gnb-title'><strong>커뮤니티</strong>
+									<p>MOKWON<br>UNIVERSITY</p>
+								</div>
+								<div class='gnb-depth'>
+									<ul class='depth2_ul'>
+										<li><a href='html/sub05/0501.html' target='_self'><em></em><span>공지사항</span></a>
+										</li>
+										<li><a href='html/sub05/0503.html'
+												target='_self'><em></em><span>강의자료실</span></a></li>
+										<li><a href='html/sub05/0502.html'
+												target='_self'><em></em><span>포토갤러리</span></a></li>
+										<li><a href='html/sub05/0504.html'
+												target='_self'><em></em><span>홍보동영상</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<span class="line"></span>
+			</div>
+		</nav>
+		<!-- 모바일 메뉴 -->
+		<div class="modal fade" id="mobile-menu" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="mo_top_untill">
+					<ul class="utile_wrap">
+						<li class="n3 box">
+							<a id="btnAllmenu2" href="https://www.mokwon.ac.kr/common/tmpl/sitepop.php"
+								onclick="ajaxprototyOpen(this,'body'); return false;"><span></span>교내사이트</a>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-content">
+					<div class="modal-body accordion">
+						<ul class="depth1_ul n6">
+							<!-- 1. 학과안내 -->
+							<li class='th1 n1 '>
+								<a href='html/sub01/0101.html' class='th1_lnk'><span>학과안내</span></a>
+								<div class='item'>
+									<div class='gnb-title'><strong>학과안내</strong>
+										<p>MOKWON<br>UNIVERSITY</p>
+									</div>
+									<div class='gnb-depth'>
+										<ul class='depth2_ul'>
+											<li><a href='html/sub01/0101.html'
+													target='_self'><em></em><span>학과소개</span></a></li>
+											<li><a href='html/sub01/0102.html'
+													target='_self'><em></em><span>연혁</span></a></li>
+											<li><a href='html/sub01/0103.html'
+													target='_self'><em></em><span>취업과진로</span></a></li>
+											<li><a href='html/sub01/0104.html'
+													target='_self'><em></em><span>특성화전략</span></a></li>
+											<li><a href='html/sub01/0105.html'
+													target='_self'><em></em><span>학과시설</span></a></li>
+											<li><a href='html/sub01/0106.html' target='_self'><em></em><span>위치 및
+														연락처</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 2. 교수소개 -->
+							<li class='th1 n2 '>
+								<a href='html/sub02/0201.html' class='th1_lnk'><span>교수소개</span></a>
+								<div class='item'>
+									<div class='gnb-title'><strong>교수소개</strong>
+										<p>MOKWON<br>UNIVERSITY</p>
+									</div>
+									<div class='gnb-depth'>
+										<ul class='depth2_ul'>
+											<li><a href='html/sub02/0201.html'
+													target='_self'><em></em><span>컴퓨터공학과</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 3. 학사안내 -->
+							<li class='th1 n3 '>
+								<a href='html/sub03/0301.html' class='th1_lnk'><span>학사안내</span></a>
+								<div class='item'>
+									<div class='gnb-title'><strong>학사안내</strong>
+										<p>MOKWON<br>UNIVERSITY</p>
+									</div>
+									<div class='gnb-depth'>
+										<ul class='depth2_ul'>
+											<li><a href='html/sub03/0301.html'
+													target='_self'><em></em><span>교과과정</span></a></li>
+											<li><a href='html/sub03/0302.html'
+													target='_self'><em></em><span>교과목소개</span></a></li>
+											<li><a href='html/sub03/0303.html'
+													target='_self'><em></em><span>졸업요구조건</span></a></li>
+											<li><a href='html/sub03/0304.html'
+													target='_self'><em></em><span>학사일정</span></a></li>
+											<li><a href='html/sub03/0305.html'
+													target='_self'><em></em><span>직무기술서</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 4. 특성화사업 -->
+							<li class='th1 n4 '>
+								<a href='html/sub07/0701.html' class='th1_lnk'><span>특성화사업</span></a>
+								<div class='item'>
+									<div class='gnb-title'><strong>특성화사업</strong>
+										<p>MOKWON<br>UNIVERSITY</p>
+									</div>
+									<div class='gnb-depth'>
+										<ul class='depth2_ul'>
+											<li><a href='html/sub07/0701.html'
+													target='_self'><em></em><span>SW인재양성사업</span></a></li>
+											<li><a href='html/sub07/0702.html' target='_self'><em></em><span>SW전문인재양성사업
+														교육과정</span></a></li>
+											<li><a href='html/sub07/0703.html' target='_self'><em></em><span>IPP사업
+														안내</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 5. 학생활동 -->
+							<li class='th1 n5 '>
+								<a href='html/sub04/0401.html' class='th1_lnk'><span>학생활동</span></a>
+								<div class='item'>
+									<div class='gnb-title'><strong>학생활동</strong>
+										<p>MOKWON<br>UNIVERSITY</p>
+									</div>
+									<div class='gnb-depth'>
+										<ul class='depth2_ul'>
+											<li><a href='html/sub04/0401.html'
+													target='_self'><em></em><span>학생회</span></a></li>
+											<li><a href='html/sub04/0402.html'
+													target='_self'><em></em><span>동아리정보</span></a></li>
+											<li><a href='html/sub04/0403.html'
+													target='_self'><em></em><span>학술제작품</span></a></li>
+											<li><a href='html/sub04/0404.html'
+													target='_self'><em></em><span>교내외수상</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<!-- 6. 커뮤니티 -->
+							<li class='th1 n6 '>
+								<a href='html/sub05/0501.html' class='th1_lnk'><span>커뮤니티</span></a>
+								<div class='item'>
+									<div class='gnb-title'><strong>커뮤니티</strong>
+										<p>MOKWON<br>UNIVERSITY</p>
+									</div>
+									<div class='gnb-depth'>
+										<ul class='depth2_ul'>
+											<li><a href='html/sub05/0501.html'
+													target='_self'><em></em><span>공지사항</span></a></li>
+											<li><a href='html/sub05/0503.html'
+													target='_self'><em></em><span>강의자료실</span></a></li>
+											<li><a href='html/sub05/0502.html'
+													target='_self'><em></em><span>포토갤러리</span></a></li>
+											<li><a href='html/sub05/0504.html'
+													target='_self'><em></em><span>홍보동영상</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<button type="button" class="mobile-close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">닫기</span></button>
+					</div>
+				</div>
+			</div>
 		</div>
-	</main>
-	<section>
-		<div class="container">
-			<h2>섹션1</h2>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
+	</header>
+	<div class="gnb_bg"></div>
+	<hr>
+
+	<!-- 플로팅 메뉴 -->
+	<div id="floatMenu">
+		<ul>
+			<li>
+				<div class="quick n1 clickOpen">
+					<button type="button">주요<br>서비스 <span>열림버튼</span></button>
+					<div>
+						<div class="inner">
+							<div class="tit"><span>주요서비스</span></div>
+							<ul>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="http://i.mokwon.ac.kr/">종합정보시스템</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="http://s.mokwon.ac.kr/">수강신청시스템</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="https://career.mokwon.ac.kr/">취업정보시스템</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="https://www.mokwon.ac.kr/kr/html/sub04/040309.html">증명서발급</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="http://lib.mokwon.ac.kr/">중앙도서관</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="https://www.mokwon.ac.kr/kr/html/sub05/050302.html">교내연락처</a></li>
+							</ul>
+							<button type="button" class="clickClose">주요서비스 <span>닫힘버튼</span></button>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="quick n2 clickOpen">
+					<button type="button">학사 <span>열림버튼</span></button>
+					<div>
+						<div class="inner">
+							<div class="tit"><span>학사</span></div>
+							<ul>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="https://www.mokwon.ac.kr/kr/html/sub03/0301.html">학사일정</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="https://www.mokwon.ac.kr/kr/html/sub04/040101.html">장학</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="https://www.mokwon.ac.kr/kr/html/sub03/030601.html">휴학</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="https://www.mokwon.ac.kr/kr/html/sub03/030602.html">복학</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="https://www.mokwon.ac.kr/kr/html/sub07/0702.html">민원상담</a></li>
+								<li><a target="_blank" title="새창" rel="noopener noreferrer"
+										href="https://www.mokwon.ac.kr/kr/html/sub04/040301.html">학교식당(식단)</a></li>
+							</ul>
+							<button type="button" class="clickClose">학사 <span>닫힘버튼</span></button>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li><button type="button" class="move_top">상단으로</button></li>
+		</ul>
+	</div>
+
+	<!-- 메인 바디 레이아웃 -->
+	<div id="body_layout">
+		<div class="body_wrap">
+			<div class="cont cont1">
+				<div id="mainVisual">
+					<div class="item" style="background-image:url(images/mainVisual_02.jpg)">
+						<div class="layout">
+							<div class="slidewrap"><strong class="box__title">Beyond Yourself,</strong></div>
+							<div class="slidewrap"><strong class="box__title">One Step Ahead!</strong></div>
+						</div>
+					</div>
+				</div>
+				<div class="link_wrap">
+					<div class="layout">
+						<ul class="col6 clear">
+							<li><a href="html/sub01/0106.html"><span class="ico ico1"></span><em>위치 및 연락처</em></a></li>
+							<li><a href="html/sub01/0105.html"><span class="ico ico2"></span><em>학과시설</em></a></li>
+							<li><a href="html/sub03/0304.html"><span class="ico ico3"></span><em>학사일정</em></a></li>
+							<li><a href="html/sub01/0104.html"><span class="ico ico4"></span><em>특성화 전략</em></a></li>
+							<li><a href="html/sub04/0402.html"><span class="ico ico6"></span><em>동아리 정보</em></a></li>
+							<li><a href="html/sub04/0403.html"><span class="ico ico9"></span><em>학술제작품</em></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="cont cont2">
+				<div class="box layout clear">
+					<div id="item2" class="item">
+						<div class="inner">
+							<strong class="box__title exo">NEWS</strong>
+							<div class="main-board__skin board__list board__typeA">
+								<ul class="ui-nav ui-nav_dropdown">
+									<li class="tab">
+										<a href="#" class="tab-dropdown">전체소식</a>
+										<ul class="tab-dropdown-menu">
+											<li class="dropdown-item"><a href="#tab1-content"
+													class="dropdown-link">전체소식</a></li>
+											<li class="dropdown-item"><a href="#tab2-content" class="dropdown-link"
+													title="Tab 2B">공지사항</a></li>
+										</ul>
+									</li>
+								</ul>
+								<div class="ui-tab_content">
+									<div class="scroll tab__body active" id="tab1-content">
+										<div class="scrollbar-inner">
+											<ul>
+												<li class="board__item">
+													<a href="html/sub05/05014d73.html?mode=V&amp;no=b31cc2a11b3da2ab5a2011085199833c"
+														class="board__link">
+														<strong class="board__item--title">
+															<em>공지사항</em>
+															[1~4학년 대상] 실전 역량 점검! PCSQL 코딩테스트 안내 </strong>
+														<em class="board__item--content">컴퓨터공학과 재학생 여러분!!&nbsp;&nbsp;
+															자신의 코딩 실력을 점검하고 성장의 발판을 마련할 수 있는 프로그래머스의&nbsp;PCSQL (MySQL
+															or
+															Oracle) 코딩테스트를&nbsp;무료로 선착순 50명 접수하여 실시하오니, 전 학년 학생들의 많은 참여
+															바랍니다.
+
+
+
+
+
+															&nbsp;
+														</em>
+														<em class="board__item--date"><span>2025-05<i>27</i></span></em>
+													</a>
+												</li>
+												<li class="board__item">
+													<a href="html/sub05/0501d5e5.html?mode=V&amp;no=072223e7567f3317a8e35efbee63d216"
+														class="board__link">
+														<strong class="board__item--title">
+															<em>공지사항</em>
+															[중요] 2025 SW중심대학 디지털 경진대회 참가신청 안내 </strong>
+														<em class="board__item--content">안녕하십니까!
+
+															목원대학교 SW중심대학 사업 책임자 여상수 교수입니다.
+
+															&nbsp;
+
+															2025년 6월부터 우리대학이 SW중심대학 사업에 선정되어 앞으로 6년간 55억 이상의 지원을 받게
+															되었습니다.
+
+															참여하는 학과는 컴퓨터공학과, 게임소프트웨어공학과,&nbsp; AI응용학과 등 3개 SW계열학과와
+															연극영화영상학부, 웹툰학과, 애니메이션학과, 게임콘텐츠학과 등 4개의 비SW계열학과입니다.
+
+															&nbsp;
+
+															우리학생들의 실력을 뽐낼 첫번째 기회가 왔습니다.
+
+															SW중심대학 사업에 참여하는 58개 대학이 모두 참여하는 디지털 경진대회에 참여할 팀을 모집합니다.
+
+															경진대회 내용을 확인하고 SW부문은 3~5인 팀, AI부문은 1인~5인 팀으로 신청해 주시기 바랍니다.
+
+															&nbsp;
+
+															붙임1의 대회 안내 자료를 꼼꼼하게 읽어주시고, 신청자를 대상으로 OT(6/3(화),&nbsp;예정)를
+															진행하겠습니다.
+
+															SW부문은 1팀만 출전이 가능하므로 신청팀이 여럿인 경우 선발하도록 하겠습니다.
+
+															우리대학 신청은 6/3(화)까지 받겠습니다.
+
+															모든 참여하는 학과 학생들 화이팅입니다.!!
+
+															&nbsp;
+
+															1. 목원대 참가자 신청마감:&nbsp; 6/3(화)
+
+															2. 목원대 SW부문 참가 신청서 URL
+															https://bit.ly/MWSW_2025DC_SW
+
+															3.&nbsp;목원대 AI부문 참가 신청서 URL
+															https://bit.ly/MWSW_2025DC_AI
+
+
+
+															&nbsp;</em>
+														<em class="board__item--date"><span>2025-05<i>23</i></span></em>
+													</a>
+												</li>
+												<li class="board__item">
+													<a href="html/sub05/0501a430.html?mode=V&amp;no=0aecaf5707ba52e1cab33cf9ce626f37"
+														class="board__link">
+														<strong class="board__item--title">
+															<em>공지사항</em>
+															[필독] 2025년 SW아카데미사업 종료! 웹프론트엔드과정 마지막 신청 받습니다! </strong>
+														<em class="board__item--content">학과장 여상수 교수입니다.
+
+															목원대 대학기업협력형 SW아카데미사업이 올해로 끝이납니다.&nbsp;
+
+															마지막 교육생 모집입니다.&nbsp;많은 관심과 신청바랍니다.
+
+															&nbsp;
+
+															SW전문인재 양성을 위한 SW아카데미 (대전,충남지역 대학 재학생/졸업생 신청 가능)
+															&nbsp;
+
+															&lt;웹 프론트엔드 과정 교육생 모집&gt;
+
+															■&nbsp;교육내용&nbsp;: 웹 프론트엔트 개발자 교육&nbsp;
+
+															&nbsp; &nbsp; * HTML5, CSS, JavaScript, React, TypeScript 등의
+															웹프론트엔드 기술 스택
+
+															&nbsp;
+
+															■&nbsp;교&nbsp; 육&nbsp; 비&nbsp;: 1인당 약200만원 상당 교육비 전액 무료
+
+															&nbsp; &nbsp; * 과기부 대학&middot;기업협력형SW아카데미 사업 지원
+															&nbsp;
+
+															■&nbsp;교육특전&nbsp;
+
+															&nbsp; &nbsp; ① 목원대 공학관 4층 &quot;웹 프론트엔트 전용 실습실&quot; 1인
+															1석(듀얼모니터) 지정 제공
+															&nbsp; &nbsp; ②&nbsp;관련 분야&nbsp;취업지도 및 SW개발직 외에도 다양한 직군/직종
+															취업 지도/연계 지원
+
+															&nbsp; &nbsp; ③&nbsp;월별 80% 이상 교육장 출석자에 대해 교육지원금 30만원
+															지급(예비교육 기간은 제외)
+
+															&nbsp;
+
+															■&nbsp;접수기간 : 2025년 6월 5일(금)까지
+
+															&nbsp;
+
+															■&nbsp;2025년 2텀(7기) 교육 안내
+
+															○&nbsp;참여자격&nbsp;: 4학년 재학생 및 졸업생을 우선 선발 (3학년은 신청 후, 별도 상담
+															요망)
+
+															○&nbsp;과정운영&nbsp;:&nbsp; 교육장에 오프라인 출석하여 온라인 과정 총 640시간 교육 이수
+
+
+															[ 방학 집중 과정 ]&nbsp; 7/7(월)~8/22(금), 월-금 09시~18시 매일 8시간 총
+															280시간
+															* 휴가 1주 포함 (휴가 중 온라인 강의 수강 필수)
+															[ 2학기 수업 연계 과정
+															]&nbsp;&nbsp;&nbsp;9/2(화)~12/19(금),&nbsp;화-금&nbsp;13시~19시
+															매일&nbsp;6시간 총&nbsp;360시간&nbsp;&nbsp;
+
+															컴퓨터공학과 전공&nbsp;2과목(웹프론트엔드종합설계A, B)&nbsp;수강 &rArr;
+															전공&nbsp;12학점 이수(타과생은&nbsp;자유 전공)
+
+
+
+															○&nbsp;교육방식&nbsp;:&nbsp; 현직 개발자 교육(프로그래머스 사이트로 온라인 교육 및
+															라이브세션)
+
+															○&nbsp;교육장소&nbsp;:&nbsp; 목원대학교 공학관 4층 D428호(1인1석 제공)
+
+															○&nbsp;예비교육&nbsp;및&nbsp;코딩테스트&nbsp;: 온라인
+															예비교육&nbsp;6/30(월)~7/03(목),&nbsp;7/04(금)&nbsp;선발코딩테스트
+
+															○ 신청 URL 클릭: https://bit.ly/MWSW_2025_02
+
+
+
+															&nbsp;
+
+
+
+															■&nbsp;교육문의&nbsp;: 목원대학교 SW전문인재양성센터 김연수 교수, 이선희 교수
+
+
+															전화: 042-829-7628~9&nbsp; &nbsp;/&nbsp;
+															이메일:&nbsp;&nbsp;mwFrontend@gmail.com&nbsp;
+															궁금한 점이 있으면, 먼저 신청하신 후에 문의 주시면 잘 도와드릴 수 있습니다!
+
+
+
+
+															&nbsp;</em>
+														<em class="board__item--date"><span>2025-05<i>20</i></span></em>
+													</a>
+												</li>
+												<li class="board__item">
+													<a href="html/sub05/0501ecc8.html?mode=V&amp;no=b1f73dda3848469ab20383d0a5f6a7e1"
+														class="board__link">
+														<strong class="board__item--title">
+															<em>공지사항</em>
+															** 배리어프리 앱개발 콘테스트 ** 주최: 현대오토에버,서울사회복지공동모금회 / 주관: 사단법인 그린라이트
+														</strong>
+														<em class="board__item--content">﻿﻿대학생 공모전 &lsquo;배리어프리 앱개발
+															콘테스트&rsquo;는 현대오토에버와 서울사회복지공동모금회가 지원, 사단법인 그린라이트가
+															주관,&nbsp;과학기술정보통신부와 교육부 산하 국립특수교육원이 후원하여 사회취약계층의 이동 및 생활 편의를
+															증진하기 위해 대학생들이 직접 앱을 기획하고 제작할 수 있도록 지원하고 있습니다.&nbsp;
+
+															&#39;배리어프리 앱 개발 콘테스트&rsquo;는 홈페이지에서 신청이 가능하며, 선정된 학생들에게는 앱
+															제작에 필요한 비용(팀 당 500만원)과 전문가 교육을 제공할 계획입니다.&nbsp;
+
+															또한 관련 분야 제작 전문가와 월 1회 멘토링도 병행하며 학생들이 보다 좋은 환경에서 앱 제작 경험을 할 수
+															있도록 지원하고 있습니다.&nbsp;
+															(지도 교수님께서&nbsp;직접 학생들과 한 팀으로 참가하는 것도 가능)
+
+															※ 배리어프리 앱개발 콘테스트 홈페이지 바로가기 https://www.autoeverapp.kr/
+
+															첨부한 홍보 포스터와 안내 문서를 참고하세요.
+
+															지원 관련 문의 : 학과장 여상수 교수&nbsp; /&nbsp; sangsooyeo@gmail.com
+
+															&nbsp;</em>
+														<em class="board__item--date"><span>2025-05<i>12</i></span></em>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="scroll-element scroll-x scroll-scrolly_visible">
+											<div class="scroll-element_outer">
+												<div class="scroll-element_size"></div>
+												<div class="scroll-element_track"></div>
+												<div class="scroll-bar"></div>
+											</div>
+										</div>
+										<div class="scroll-element scroll-y scroll-scrolly_visible">
+											<div class="scroll-element_outer">
+												<div class="scroll-element_size"></div>
+												<div class="scroll-element_track"></div>
+												<div class="scroll-bar" style="top: 295px;"></div>
+											</div>
+										</div>
+									</div>
+									<div class="scroll tab__body" id="tab2-content">
+										<div class="scrollbar-inner">
+											<ul>
+												<li class="board__item">
+													<a href="html/sub05/05014d73.html?mode=V&amp;no=b31cc2a11b3da2ab5a2011085199833c"
+														class="board__link">
+														<strong class="board__item--title">
+															<em>공지사항</em>
+															[1~4학년 대상] 실전 역량 점검! PCSQL 코딩테스트 안내
+														</strong>
+														<em class="board__item--content">컴퓨터공학과 재학생 여러분!!
+															자신의 코딩 실력을 점검하고 성장의 발판을 마련할 수 있는 프로그래머스의 PCSQL (MySQL or
+															Oracle) 코딩테스트를 무료로 선착순 50명 접수하여 실시하오니, 전 학년 학생들의 많은 참여
+															바랍니다.</em>
+														<em class="board__item--date"><span>2025.05<i>27</i></span></em>
+													</a>
+												</li>
+
+												<li class="board__item">
+													<a href="html/sub05/0501d5e5.html?mode=V&amp;no=072223e7567f3317a8e35efbee63d216"
+														class="board__link">
+														<strong class="board__item--title">
+															<em>공지사항</em>
+															[중요] 2025 SW중심대학 디지털 경진대회 참가신청 안내
+														</strong>
+														<em class="board__item--content">안녕하십니까!
+
+															목원대학교 SW중심대학 사업 책임자 여상수 교수입니다.
+
+
+
+															2025년 6월부터 우리대학이 SW중심대학 사업에 선정되어 앞으로 6년간 55억 이상의 지원을 받게
+															되었습니다.
+
+															참여하는 학과는 컴퓨터공학과, 게임소프...</em>
+														<em class="board__item--date"><span>2025.05<i>23</i></span></em>
+													</a>
+												</li>
+
+												<li class="board__item">
+													<a href="html/sub05/0501a430.html?mode=V&amp;no=0aecaf5707ba52e1cab33cf9ce626f37"
+														class="board__link">
+														<strong class="board__item--title">
+															<em>공지사항</em>
+															[필독] 2025년 SW아카데미사업 종료! 웹프론트엔드과정 마지막 신청 받습니다!
+														</strong>
+														<em class="board__item--content">학과장 여상수 교수입니다.
+
+															목원대 대학기업협력형 SW아카데미사업이 올해로 끝이납니다.
+
+															마지막 교육생 모집입니다. 많은 관심과 신청바랍니다.
+
+
+
+															SW전문인재 양성을 위한 SW아카데미 대전,충남지역 대학 재학생/졸업생 ...</em>
+														<em class="board__item--date"><span>2025.05<i>20</i></span></em>
+													</a>
+												</li>
+
+												<li class="board__item">
+													<a href="html/sub05/0501ecc8.html?mode=V&amp;no=b1f73dda3848469ab20383d0a5f6a7e1"
+														class="board__link">
+														<strong class="board__item--title">
+															<em>공지사항</em>
+															** 배리어프리 앱개발 콘테스트 ** 주최: 현대오토에버,서울사회복지공동모금회 / 주관: 사단법인 그린라이트
+														</strong>
+														<em class="board__item--content">﻿﻿대학생 공모전 &lsquo;배리어프리 앱개발
+															콘테스트&rsquo;는 현대오토에버와 서울사회복지공동모금회가 지원, 사단법인 그린라이트가 주관,
+															과학기술정보통신부와 교육부 산하 국립특수교육원이 후원하여 사회취약계층의 ...</em>
+														<em class="board__item--date"><span>2025.05<i>12</i></span></em>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="scroll-element scroll-x">
+											<div class="scroll-element_outer">
+												<div class="scroll-element_size"></div>
+												<div class="scroll-element_track"></div>
+												<div class="scroll-bar"></div>
+											</div>
+										</div>
+										<div class="scroll-element scroll-y">
+											<div class="scroll-element_outer">
+												<div class="scroll-element_size"></div>
+												<div class="scroll-element_track"></div>
+												<div class="scroll-bar" style="top: 295px;"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item3" class="item">
+						<div class="inner">
+							<strong class="box__title">컴퓨터공학과</strong>
+							<div class="box__wrap">
+								<p>우리학과는 4차산업혁명의 핵심기술인 컴퓨팅 기초이론을 비롯하여 IoT, 클라우드, 빅데이터, 인공지능, 정보보호, 멀티미디어 그래픽등에 관련된 이론과
+									실습을 병행하여 현장적응 능한 인재를 육성합니다.​</p>
+							</div>
+							<div class="button__wrap clear">
+								<em><a href="html/sub03/0301.html"><span class="ir ir-main mokwon-icon__box ir-icon__1"
+											aria-hidden="true"></span>교과과정<i aria-hidden="true"></i></a></em>
+								<em><a href="html/sub03/0302.html"><span class="ir ir-main mokwon-icon__box ir-icon__2"
+											aria-hidden="true"></span>교과목 소개<i aria-hidden="true"></i></a></em>
+								<em><a href="html/sub02/0201.html"><span class="ir ir-main mokwon-icon__box ir-icon__3"
+											aria-hidden="true"></span>교수소개<i aria-hidden="true"></i></a></em>
+								<em><a href="html/sub01/0103.html"><span class="ir ir-main mokwon-icon__box ir-icon__4"
+											aria-hidden="true"></span>취업/채용정보<i aria-hidden="true"></i></a></em>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</section>
-	<section>
-		<div class="container">
-			<h2>섹션2</h2>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
-		</div>
-	</section>
-	<section>
-		<div class="container">
-			<h2>섹션3</h2>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
-		</div>
-	</section>
-	<section>
-		<div class="container">
-			<h2>섹션4</h2>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
-		</div>
-	</section>
-	<footer>
-		<div class="container">
-			<p>© 2023 김똘똘. All rights reserved.</p>
-			//TODO: 본인의 닉네임, 이메일 주소, 저작권 표시 등을 작성하세요.
-			//FIXME: 특히, 가져온 그림에 대한 저작권 표시를 반드시 작성하세요.
+	</div>
+
+	<!-- 푸터 -->
+	<footer id="foot_layout">
+		<div class="foottop"><button type="button">상단으로 이동</button></div>
+		<div class="layout">
+			<div class="footer-info">
+				<ul class="clearfix">
+					<li><a target="_blank" title="새창" rel="noopener noreferrer"
+							href="https://www.mokwon.ac.kr/kr/html/sub09/090501.html">개인정보처리방침</a></li>
+					<li><a target="_blank" title="새창" rel="noopener noreferrer"
+							href="https://www.mokwon.ac.kr/kr/html/sub09/0906.html">이메일무단수집거부</a></li>
+					<li><a target="_blank" title="새창" rel="noopener noreferrer"
+							href="https://www.academyinfo.go.kr/popup/pubinfo1690/list.do?schlId=0000112">대학정보공시</a>
+					</li>
+					<li><a target="_blank" title="새창" rel="noopener noreferrer"
+							href="https://www.mokwon.ac.kr/kr/html/sub05/050602.html">오시는길</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<address>
+					<span>[35349 ] 대전광역시 서구 도안북로 88(도안동, 목원대학교) 공학관(D) 3층 D328호</span>
+					<span>Tel. 042-829-7630</span>
+					<span>Fax. 042-822-8431</span>
+				</address>
+				<p class="copy">copyright&copy; 2020 mokwon university. all rights reserved.</p>
+			</div>
+			<div class="linkwrap">
+				<div class="sns">
+					<ul>
+						<li class="bl"><a target="_blank" title="새창" rel="noopener noreferrer"
+								href="https://blog.naver.com/mokwon_univ">네이버블로그</a></li>
+						<li class="fa"><a target="_blank" title="새창" rel="noopener noreferrer"
+								href="https://www.facebook.com/mokwon.univ">페이스북</a></li>
+						<li class="yu"><a target="_blank" title="새창" rel="noopener noreferrer"
+								href="https://www.youtube.com/c/mokwonuniv">유튜브</a></li>
+						<li class="ca"><a target="_blank" title="새창" rel="noopener noreferrer"
+								href="https://pf.kakao.com/_yhxksT">카카오채널</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</footer>
 </body>

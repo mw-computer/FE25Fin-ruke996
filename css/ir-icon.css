@@ -1,0 +1,1803 @@
+@charset "utf-8";
+
+.ir-icon {
+    background-repeat: no-repeat;
+}
+
+.ir-icon__xs {
+    background-image: url("../images/ir/ir-icon__xs.png")
+}
+
+.ir-icon__sm {
+    background-image: url("../images/ir/ir-icon__sm.png")
+}
+
+.ir-icon__md {
+    background-image: url("../images/ir/ir-icon__md.png")
+}
+
+.ir-icon__lg {
+    background-image: url("../images/ir/ir-icon__lg.png")
+}
+
+.ir-icon__line {
+    background-image: url("../images/ir/ir-icon__line.png")
+}
+
+.ir-icon_color_line {
+    background-image: url("../images/ir/ir-icon__color_line.png")
+}
+
+.ui-process__icon {
+    background-image: url("../images/ir/ir-process.png")
+}
+
+.circle {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle .ir-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.circle .ir-icon__xs {
+    width: 25px;
+    height: 25px;
+}
+
+.circle .ir-icon__sm {
+    width: 40px;
+    height: 40px;
+}
+
+.circle .ir-icon__md {
+    width: 110px;
+    height: 110px;
+}
+
+.circle .ir-icon__lg {
+    width: 200px;
+    height: 200px;
+}
+
+.circle .ir-icon__line {
+    width: 71px;
+    height: 71px;
+}
+
+/* ir-icon__xs */
+.ir-icon__xs.icon1 {
+    background-position: 0 0;
+}
+
+.ir-icon__xs.icon2 {
+    background-position: -25px 0;
+}
+
+.ir-icon__xs.icon3 {
+    background-position: -50px 0;
+}
+
+.ir-icon__xs.icon4 {
+    background-position: -75px 0;
+}
+
+.ir-icon__xs.icon5 {
+    background-position: -100px 0;
+}
+
+.ir-icon__xs.icon6 {
+    background-position: -125px 0;
+}
+
+.ir-icon__xs.icon7 {
+    background-position: -150px 0;
+}
+
+.ir-icon__xs.icon8 {
+    background-position: -175px 0;
+}
+
+.ir-icon__xs.icon9 {
+    background-position: -200px 0;
+}
+
+.ir-icon__xs.icon10 {
+    background-position: -225px 0;
+}
+
+.ir-icon__xs.icon11 {
+    background-position: -250px 0;
+}
+
+.ir-icon__xs.icon12 {
+    background-position: -277px 0;
+}
+
+.ir-icon__xs.icon13 {
+    background-position: -302px 0;
+}
+
+.ir-icon__xs.icon14 {
+    background-position: -327px 0;
+}
+
+.ir-icon__xs.icon15 {
+    background-position: -352px 0;
+}
+
+.ir-icon__xs.icon16 {
+    background-position: -377px 0;
+}
+
+.ir-icon__xs.icon17 {
+    background-position: -402px 0;
+}
+
+.ir-icon__xs.icon18 {
+    background-position: -427px 0;
+}
+
+.ir-icon__xs.icon19 {
+    background-position: -452px 0;
+}
+
+.ir-icon__xs.icon20 {
+    background-position: -477px 0;
+}
+
+.ir-icon__xs.icon21 {
+    background-position: -502px 0;
+}
+
+.ir-icon__xs.icon22 {
+    background-position: -527px 0;
+}
+
+.ir-icon__xs.icon23 {
+    background-position: -552px 0;
+}
+
+.ir-icon__xs.icon24 {
+    background-position: -577px 0;
+}
+
+/* ir-icon__sm */
+.ir-icon__sm.icon1 {
+    background-position: 0 0;
+}
+
+.ir-icon__sm.icon2 {
+    background-position: -40px 0;
+}
+
+.ir-icon__sm.icon3 {
+    background-position: -80px 0;
+}
+
+.ir-icon__sm.icon4 {
+    background-position: -120px 0;
+}
+
+.ir-icon__sm.icon5 {
+    background-position: -160px 0;
+}
+
+.ir-icon__sm.icon6 {
+    background-position: -200px 0;
+}
+
+.ir-icon__sm.icon7 {
+    background-position: -240px 0;
+}
+
+.ir-icon__sm.icon8 {
+    background-position: -280px 0;
+}
+
+.ir-icon__sm.icon9 {
+    background-position: -320px 0;
+}
+
+.ir-icon__sm.icon10 {
+    background-position: -360px 0;
+}
+
+.ir-icon__sm.icon11 {
+    background-position: -400px 0;
+}
+
+.ir-icon__sm.icon12 {
+    background-position: -440px 0;
+}
+
+.ir-icon__sm.icon13 {
+    background-position: -480px 0;
+}
+
+.ir-icon__sm.icon14 {
+    background-position: -520px 0;
+}
+
+.ir-icon__sm.icon15 {
+    background-position: -560px 0;
+}
+
+.ir-icon__sm.icon16 {
+    background-position: -600px 0;
+}
+
+/* ir-icon__md */
+.ir-icon__md.icon1 {
+    background-position: 8px 8px;
+}
+
+.ir-icon__md.icon2 {
+    background-position: -110px 0
+}
+
+.ir-icon__md.icon3 {
+    background-position: -220px 0
+}
+
+.ir-icon__md.icon4 {
+    background-position: -330px 0
+}
+
+.ir-icon__md.icon5 {
+    background-position: -440px 0
+}
+
+.ir-icon__md.icon6 {
+    background-position: -550px 0
+}
+
+.ir-icon__md.icon7 {
+    background-position: -660px 0
+}
+
+.ir-icon__md.icon8 {
+    background-position: -770px 0
+}
+
+.ir-icon__md.icon9 {
+    background-position: -880px 0
+}
+
+.ir-icon__md.icon10 {
+    background-position: -990px 0
+}
+
+.ir-icon__md.icon11 {
+    background-position: 0 -110px
+}
+
+.ir-icon__md.icon12 {
+    background-position: -110px -110px
+}
+
+.ir-icon__md.icon13 {
+    background-position: -220px -110px
+}
+
+.ir-icon__md.icon14 {
+    background-position: -330px -110px
+}
+
+.ir-icon__md.icon15 {
+    background-position: -440px -110px
+}
+
+.ir-icon__md.icon16 {
+    background-position: -550px -110px
+}
+
+.ir-icon__md.icon17 {
+    background-position: -660px -110px
+}
+
+.ir-icon__md.icon18 {
+    background-position: -770px -110px
+}
+
+.ir-icon__md.icon19 {
+    background-position: -880px -110px
+}
+
+.ir-icon__md.icon20 {
+    background-position: -990px -110px
+}
+
+.ir-icon__md.icon21 {
+    background-position: 0 -220px
+}
+
+.ir-icon__md.icon22 {
+    background-position: -110px -220px
+}
+
+.ir-icon__md.icon23 {
+    background-position: -220px -220px
+}
+
+.ir-icon__md.icon24 {
+    background-position: -330px -220px
+}
+
+.ir-icon__md.icon25 {
+    background-position: -440px -220px
+}
+
+.ir-icon__md.icon26 {
+    background-position: -550px -220px
+}
+
+.ir-icon__md.icon27 {
+    background-position: -660px -220px
+}
+
+.ir-icon__md.icon28 {
+    background-position: -770px -220px
+}
+
+.ir-icon__md.icon29 {
+    background-position: -880px -220px
+}
+
+.ir-icon__md.icon30 {
+    background-position: -990px -220px
+}
+
+.ir-icon__md.icon31 {
+    background-position: 0 -330px
+}
+
+.ir-icon__md.icon32 {
+    background-position: -110px -330px
+}
+
+.ir-icon__md.icon33 {
+    background-position: -220px -330px
+}
+
+.ir-icon__md.icon34 {
+    background-position: -330px -330px
+}
+
+.ir-icon__md.icon35 {
+    background-position: -440px -330px
+}
+
+.ir-icon__md.icon36 {
+    background-position: -550px -330px
+}
+
+.ir-icon__md.icon37 {
+    background-position: -660px -330px
+}
+
+.ir-icon__md.icon38 {
+    background-position: -770px -330px
+}
+
+.ir-icon__md.icon39 {
+    background-position: -880px -330px
+}
+
+.ir-icon__md.icon40 {
+    background-position: -990px -330px
+}
+
+.ir-icon__md.icon41 {
+    background-position: 0 -440px
+}
+
+.ir-icon__md.icon42 {
+    background-position: -110px -440px
+}
+
+.ir-icon__md.icon43 {
+    background-position: -220px -440px
+}
+
+.ir-icon__md.icon44 {
+    background-position: -330px -440px
+}
+
+.ir-icon__md.icon45 {
+    background-position: -440px -440px
+}
+
+.ir-icon__md.icon46 {
+    background-position: -550px -440px
+}
+
+.ir-icon__md.icon47 {
+    background-position: -660px -440px
+}
+
+.ir-icon__md.icon48 {
+    background-position: -770px -440px
+}
+
+.ir-icon__md.icon49 {
+    background-position: -880px -440px
+}
+
+.ir-icon__md.icon50 {
+    background-position: -990px -440px
+}
+
+.ir-icon__md.icon51 {
+    background-position: 0 -550px
+}
+
+.ir-icon__md.icon52 {
+    background-position: -110px -550px
+}
+
+.ir-icon__md.icon53 {
+    background-position: -220px -550px
+}
+
+.ir-icon__md.icon54 {
+    background-position: -330px -550px
+}
+
+.ir-icon__md.icon55 {
+    background-position: -440px -550px
+}
+
+.ir-icon__md.icon56 {
+    background-position: -550px -550px
+}
+
+.ir-icon__md.icon57 {
+    background-position: -660px -550px
+}
+
+.ir-icon__md.icon58 {
+    background-position: -770px -550px
+}
+
+.ir-icon__md.icon59 {
+    background-position: -880px -550px
+}
+
+.ir-icon__md.icon60 {
+    background-position: -990px -550px
+}
+
+.ir-icon__md.icon61 {
+    background-position: 0 -660px
+}
+
+.ir-icon__md.icon62 {
+    background-position: -110px -660px
+}
+
+.ir-icon__md.icon63 {
+    background-position: -220px -660px
+}
+
+.ir-icon__md.icon64 {
+    background-position: -330px -660px
+}
+
+.ir-icon__md.icon65 {
+    background-position: -440px -660px
+}
+
+.ir-icon__md.icon66 {
+    background-position: -550px -660px
+}
+
+.ir-icon__md.icon67 {
+    background-position: -660px -660px
+}
+
+.ir-icon__md.icon68 {
+    background-position: -770px -660px
+}
+
+.ir-icon__md.icon69 {
+    background-position: -880px -660px
+}
+
+.ir-icon__md.icon70 {
+    background-position: -990px -660px
+}
+
+.ir-icon__md.icon71 {
+    background-position: 0 -770px
+}
+
+.ir-icon__md.icon72 {
+    background-position: -110px -770px
+}
+
+.ir-icon__md.icon73 {
+    background-position: -220px -770px
+}
+
+.ir-icon__md.icon74 {
+    background-position: -330px -770px
+}
+
+.ir-icon__md.icon75 {
+    background-position: -440px -770px
+}
+
+.ir-icon__md.icon76 {
+    background-position: -550px -770px
+}
+
+.ir-icon__md.icon77 {
+    background-position: -660px -770px
+}
+
+.ir-icon__md.icon78 {
+    background-position: -770px -770px
+}
+
+.ir-icon__md.icon79 {
+    background-position: -880px -770px
+}
+
+.ir-icon__md.icon80 {
+    background-position: -990px -770px
+}
+
+.ir-icon__md.icon81 {
+    background-position: 0 -880px
+}
+
+.ir-icon__md.icon82 {
+    background-position: -110px -880px
+}
+
+.ir-icon__md.icon83 {
+    background-position: -220px -880px
+}
+
+.ir-icon__md.icon84 {
+    background-position: -330px -880px
+}
+
+.ir-icon__md.icon85 {
+    background-position: -440px -880px
+}
+
+.ir-icon__md.icon86 {
+    background-position: -550px -880px
+}
+
+.ir-icon__md.icon87 {
+    background-position: -660px -880px
+}
+
+.ir-icon__md.icon88 {
+    background-position: -770px -880px
+}
+
+.ir-icon__md.icon89 {
+    background-position: -880px -880px
+}
+
+.ir-icon__md.icon90 {
+    background-position: -990px -880px
+}
+
+.ir-icon__md.icon91 {
+    background-position: 0 -990px
+}
+
+.ir-icon__md.icon92 {
+    background-position: -110px -990px
+}
+
+.ir-icon__md.icon93 {
+    background-position: -220px -990px
+}
+
+.ir-icon__md.icon94 {
+    background-position: -330px -990px
+}
+
+.ir-icon__md.icon95 {
+    background-position: -440px -990px
+}
+
+.ir-icon__md.icon96 {
+    background-position: -550px -990px
+}
+
+.ir-icon__md.icon97 {
+    background-position: -660px -990px
+}
+
+.ir-icon__md.icon98 {
+    background-position: -770px -990px
+}
+
+.ir-icon__md.icon99 {
+    background-position: -880px -990px
+}
+
+.ir-icon__md.icon100 {
+    background-position: -990px -990px
+}
+
+.ir-icon__md.icon101 {
+    background-position: 0 -1100px
+}
+
+.ir-icon__md.icon102 {
+    background-position: -110px -1100px
+}
+
+.ir-icon__md.icon103 {
+    background-position: -220px -1100px
+}
+
+.ir-icon__md.icon104 {
+    background-position: -330px -1100px
+}
+
+.ir-icon__md.icon105 {
+    background-position: -440px -1100px
+}
+
+.ir-icon__md.icon106 {
+    background-position: -550px -1100px
+}
+
+.ir-icon__md.icon107 {
+    background-position: -660px -1100px
+}
+
+.ir-icon__md.icon108 {
+    background-position: -770px -1100px
+}
+
+.ir-icon__md.icon109 {
+    background-position: -880px -1100px
+}
+
+.ir-icon__md.icon110 {
+    background-position: -990px -1100px
+}
+
+/* ir-icon__lg */
+.ir-icon__lg.icon1 {
+    background-position: 0 0;
+}
+
+.ir-icon__lg.icon2 {
+    background-position: -200px 0;
+}
+
+.ir-icon__lg.icon3 {
+    background-position: -400px 0;
+}
+
+.ir-icon__lg.icon4 {
+    background-position: -600px 0;
+}
+
+.ir-icon__lg.icon5 {
+    background-position: -800px 0;
+}
+
+.ir-icon__lg.icon6 {
+    background-position: -1000px 0;
+}
+
+.ir-icon__lg.icon7 {
+    background-position: -1200px 0;
+}
+
+.ir-icon__lg.icon8 {
+    background-position: -1400px 0;
+}
+
+.ir-icon__lg.icon9 {
+    background-position: -1600px 0;
+}
+
+/* ir-icon__line */
+.ir-icon__line.icon1 {
+    background-position: 0 0
+}
+
+.ir-icon__line.icon2 {
+    background-position: -71px 0
+}
+
+.ir-icon__line.icon3 {
+    background-position: -139px 0
+}
+
+.ir-icon__line.icon4 {
+    background-position: -210px 0
+}
+
+.ir-icon__line.icon5 {
+    background-position: -280px 0
+}
+
+.ir-icon__line.icon6 {
+    background-position: -350px 0
+}
+
+.ir-icon__line.icon7 {
+    background-position: -420px 0
+}
+
+.ir-icon__line.icon8 {
+    background-position: -490px 0
+}
+
+.ir-icon__line.icon9 {
+    background-position: -560px 0
+}
+
+.ir-icon__line.icon10 {
+    background-position: -630px 0
+}
+
+.ir-icon__line.icon11 {
+    background-position: -700px 0
+}
+
+.ir-icon__line.icon12 {
+    background-position: -770px 0
+}
+
+.ir-icon__line.icon13 {
+    background-position: -840px 0
+}
+
+.ir-icon__line.icon14 {
+    background-position: 0 -68px
+}
+
+.ir-icon__line.icon15 {
+    background-position: -71px -68px
+}
+
+.ir-icon__line.icon16 {
+    background-position: -139px -68px
+}
+
+.ir-icon__line.icon17 {
+    background-position: -210px -68px
+}
+
+.ir-icon__line.icon18 {
+    background-position: -280px -68px
+}
+
+.ir-icon__line.icon19 {
+    background-position: -350px -68px
+}
+
+.ir-icon__line.icon20 {
+    background-position: -420px -68px
+}
+
+.ir-icon__line.icon21 {
+    background-position: -490px -68px
+}
+
+.ir-icon__line.icon22 {
+    background-position: -560px -68px
+}
+
+.ir-icon__line.icon23 {
+    background-position: -630px -68px
+}
+
+.ir-icon__line.icon24 {
+    background-position: -700px -68px
+}
+
+.ir-icon__line.icon25 {
+    background-position: -770px -68px
+}
+
+.ir-icon__line.icon26 {
+    background-position: -840px -68px
+}
+
+.ir-icon__line.icon27 {
+    background-position: 0 -137px
+}
+
+.ir-icon__line.icon28 {
+    background-position: -71px -137px
+}
+
+.ir-icon__line.icon29 {
+    background-position: -139px -137px
+}
+
+.ir-icon__line.icon30 {
+    background-position: -210px -137px
+}
+
+.ir-icon__line.icon31 {
+    background-position: -280px -137px
+}
+
+.ir-icon__line.icon32 {
+    background-position: -350px -137px
+}
+
+.ir-icon__line.icon33 {
+    background-position: -420px -137px
+}
+
+.ir-icon__line.icon34 {
+    background-position: -490px -137px
+}
+
+.ir-icon__line.icon35 {
+    background-position: -560px -137px
+}
+
+.ir-icon__line.icon36 {
+    background-position: -630px -137px
+}
+
+.ir-icon__line.icon37 {
+    background-position: -700px -137px
+}
+
+.ir-icon__line.icon38 {
+    background-position: -770px -137px
+}
+
+.ir-icon__line.icon39 {
+    background-position: -840px -137px
+}
+
+.ir-icon__line.icon40 {
+    background-position: 0 -210px
+}
+
+.ir-icon__line.icon41 {
+    background-position: -71px -210px
+}
+
+.ir-icon__line.icon42 {
+    background-position: -139px -210px
+}
+
+.ir-icon__line.icon43 {
+    background-position: -210px -210px
+}
+
+.ir-icon__line.icon44 {
+    background-position: -280px -210px
+}
+
+.ir-icon__line.icon45 {
+    background-position: -350px -210px
+}
+
+.ir-icon__line.icon46 {
+    background-position: -420px -210px
+}
+
+.ir-icon__line.icon47 {
+    background-position: -490px -210px
+}
+
+.ir-icon__line.icon48 {
+    background-position: -560px -210px
+}
+
+.ir-icon__line.icon49 {
+    background-position: -630px -210px
+}
+
+.ir-icon__line.icon50 {
+    background-position: -700px -210px
+}
+
+.ir-icon__line.icon51 {
+    background-position: -770px -210px
+}
+
+.ir-icon__line.icon52 {
+    background-position: -840px -210px
+}
+
+.ir-icon__line.icon53 {
+    background-position: 0 -280px
+}
+
+.ir-icon__line.icon54 {
+    background-position: -71px -280px
+}
+
+.ir-icon__line.icon55 {
+    background-position: -139px -280px
+}
+
+.ir-icon__line.icon56 {
+    background-position: -210px -280px
+}
+
+.ir-icon__line.icon57 {
+    background-position: -280px -280px
+}
+
+.ir-icon__line.icon58 {
+    background-position: -350px -280px
+}
+
+.ir-icon__line.icon59 {
+    background-position: -420px -280px
+}
+
+.ir-icon__line.icon60 {
+    background-position: -490px -280px
+}
+
+.ir-icon__line.icon61 {
+    background-position: -560px -280px
+}
+
+.ir-icon__line.icon62 {
+    background-position: -630px -280px
+}
+
+.ir-icon__line.icon63 {
+    background-position: -700px -280px
+}
+
+.ir-icon__line.icon64 {
+    background-position: -770px -280px
+}
+
+.ir-icon__line.icon65 {
+    background-position: -840px -280px
+}
+
+.ir-icon__line.icon66 {
+    background-position: 0 -350px
+}
+
+.ir-icon__line.icon67 {
+    background-position: -71px -350px
+}
+
+.ir-icon__line.icon68 {
+    background-position: -139px -350px
+}
+
+.ir-icon__line.icon69 {
+    background-position: -210px -350px
+}
+
+.ir-icon__line.icon70 {
+    background-position: -280px -350px
+}
+
+.ir-icon__line.icon71 {
+    background-position: -350px -350px
+}
+
+.ir-icon__line.icon72 {
+    background-position: -420px -350px
+}
+
+.ir-icon__line.icon73 {
+    background-position: -490px -350px
+}
+
+.ir-icon__line.icon74 {
+    background-position: -560px -350px
+}
+
+.ir-icon__line.icon75 {
+    background-position: -630px -350px
+}
+
+.ir-icon__line.icon76 {
+    background-position: -700px -350px
+}
+
+.ir-icon__line.icon77 {
+    background-position: -770px -350px
+}
+
+.ir-icon__line.icon78 {
+    background-position: -840px -350px
+}
+
+.ir-icon__line.icon79 {
+    background-position: 0 -420px
+}
+
+.ir-icon__line.icon80 {
+    background-position: -71px -420px
+}
+
+.ir-icon__line.icon81 {
+    background-position: -139px -420px
+}
+
+.ir-icon__line.icon82 {
+    background-position: -210px -420px
+}
+
+.ir-icon__line.icon83 {
+    background-position: -280px -420px
+}
+
+.ir-icon__line.icon84 {
+    background-position: -350px -420px
+}
+
+.ir-icon__line.icon85 {
+    background-position: -420px -420px
+}
+
+.ir-icon__line.icon86 {
+    background-position: -490px -420px
+}
+
+.ir-icon__line.icon87 {
+    background-position: -560px -420px
+}
+
+.ir-icon__line.icon88 {
+    background-position: -630px -420px
+}
+
+.ir-icon__line.icon89 {
+    background-position: -700px -420px
+}
+
+.ir-icon__line.icon90 {
+    background-position: -770px -420px
+}
+
+.ir-icon__line.icon91 {
+    background-position: -840px -420px
+}
+
+.ir-icon__line.icon92 {
+    background-position: 0 -490px
+}
+
+.ir-icon__line.icon93 {
+    background-position: -71px -490px
+}
+
+.ir-icon__line.icon94 {
+    background-position: -139px -490px
+}
+
+.ir-icon__line.icon95 {
+    background-position: -210px -490px
+}
+
+.ir-icon__line.icon96 {
+    background-position: -280px -490px
+}
+
+.ir-icon__line.icon97 {
+    background-position: -350px -490px
+}
+
+.ir-icon__line.icon98 {
+    background-position: -420px -490px
+}
+
+.ir-icon__line.icon99 {
+    background-position: -490px -490px
+}
+
+.ir-icon__line.icon100 {
+    background-position: -560px -490px
+}
+
+.ir-icon__line.icon101 {
+    background-position: -630px -490px
+}
+
+.ir-icon__line.icon102 {
+    background-position: -700px -490px
+}
+
+.ir-icon__line.icon103 {
+    background-position: -770px -490px
+}
+
+.ir-icon__line.icon104 {
+    background-position: -840px -490px
+}
+
+.ir-icon__line.icon105 {
+    background-position: 0 -547px
+}
+
+.ir-icon__line.icon106 {
+    background-position: -74px -547px
+}
+
+.ir-icon__line.icon107 {
+    background-position: -144px -547px
+}
+
+.ir-icon__line.icon108 {
+    background-position: -213px -547px
+}
+
+.ir-icon__line.icon109 {
+    background-position: -283px -547px
+}
+
+.ir-icon__line.icon110 {
+    background-position: -353px -547px
+}
+
+.ir-icon__line.icon111 {
+    background-position: 0 -780px
+}
+
+.ir-icon__line.icon112 {
+    background-position: -71px -780px
+}
+
+.ir-icon__line.icon113 {
+    background-position: -142px -780px
+}
+
+.ir-icon__line.icon114 {
+    background-position: -214px -780px
+}
+
+.ir-icon__line.icon115 {
+    background-position: -280px -780px
+}
+
+.ir-icon_color_line.icon1 {
+    background-position: 0 0
+}
+
+.ir-icon_color_line.icon2 {
+    background-position: -71px 0
+}
+
+.ir-icon_color_line.icon3 {
+    background-position: -139px 0
+}
+
+.ir-icon_color_line.icon4 {
+    background-position: -210px 0
+}
+
+.ir-icon_color_line.icon5 {
+    background-position: -280px 0
+}
+
+.ir-icon_color_line.icon6 {
+    background-position: -350px 0
+}
+
+.ir-icon_color_line.icon7 {
+    background-position: -420px 0
+}
+
+.ir-icon_color_line.icon8 {
+    background-position: -490px 0
+}
+
+.ir-icon_color_line.icon9 {
+    background-position: -560px 0
+}
+
+.ir-icon_color_line.icon10 {
+    background-position: -630px 0
+}
+
+.ir-icon_color_line.icon11 {
+    background-position: -700px 0
+}
+
+.ir-icon_color_line.icon12 {
+    background-position: -770px 0
+}
+
+.ir-icon_color_line.icon13 {
+    background-position: -840px 0
+}
+
+.ir-icon_color_line.icon14 {
+    background-position: 0 -68px
+}
+
+.ir-icon_color_line.icon15 {
+    background-position: -71px -68px
+}
+
+.ir-icon_color_line.icon16 {
+    background-position: -139px -68px
+}
+
+.ir-icon_color_line.icon17 {
+    background-position: -210px -68px
+}
+
+.ir-icon_color_line.icon18 {
+    background-position: -280px -68px
+}
+
+.ir-icon_color_line.icon19 {
+    background-position: -350px -68px
+}
+
+.ir-icon_color_line.icon20 {
+    background-position: -420px -68px
+}
+
+.ir-icon_color_line.icon21 {
+    background-position: -490px -68px
+}
+
+.ir-icon_color_line.icon22 {
+    background-position: -560px -68px
+}
+
+.ir-icon_color_line.icon23 {
+    background-position: -630px -68px
+}
+
+.ir-icon_color_line.icon24 {
+    background-position: -700px -68px
+}
+
+.ir-icon_color_line.icon25 {
+    background-position: -770px -68px
+}
+
+.ir-icon_color_line.icon26 {
+    background-position: -840px -68px
+}
+
+.ir-icon_color_line.icon27 {
+    background-position: 0 -137px
+}
+
+.ir-icon_color_line.icon28 {
+    background-position: -71px -137px
+}
+
+.ir-icon_color_line.icon29 {
+    background-position: -139px -137px
+}
+
+.ir-icon_color_line.icon30 {
+    background-position: -210px -137px
+}
+
+.ir-icon_color_line.icon31 {
+    background-position: -280px -137px
+}
+
+.ir-icon_color_line.icon32 {
+    background-position: -350px -137px
+}
+
+.ir-icon_color_line.icon33 {
+    background-position: -420px -137px
+}
+
+.ir-icon_color_line.icon34 {
+    background-position: -490px -137px
+}
+
+.ir-icon_color_line.icon35 {
+    background-position: -560px -137px
+}
+
+.ir-icon_color_line.icon36 {
+    background-position: -630px -137px
+}
+
+.ir-icon_color_line.icon37 {
+    background-position: -700px -137px
+}
+
+.ir-icon_color_line.icon38 {
+    background-position: -770px -137px
+}
+
+.ir-icon_color_line.icon39 {
+    background-position: -840px -137px
+}
+
+.ir-icon_color_line.icon40 {
+    background-position: 0 -210px
+}
+
+.ir-icon_color_line.icon41 {
+    background-position: -71px -210px
+}
+
+.ir-icon_color_line.icon42 {
+    background-position: -139px -210px
+}
+
+.ir-icon_color_line.icon43 {
+    background-position: -210px -210px
+}
+
+.ir-icon_color_line.icon44 {
+    background-position: -280px -210px
+}
+
+.ir-icon_color_line.icon45 {
+    background-position: -350px -210px
+}
+
+.ir-icon_color_line.icon46 {
+    background-position: -420px -210px
+}
+
+.ir-icon_color_line.icon47 {
+    background-position: -490px -210px
+}
+
+.ir-icon_color_line.icon48 {
+    background-position: -560px -210px
+}
+
+.ir-icon_color_line.icon49 {
+    background-position: -630px -210px
+}
+
+.ir-icon_color_line.icon50 {
+    background-position: -700px -210px
+}
+
+.ir-icon_color_line.icon51 {
+    background-position: -770px -210px
+}
+
+.ir-icon_color_line.icon52 {
+    background-position: -840px -210px
+}
+
+.ir-icon_color_line.icon53 {
+    background-position: 0 -280px
+}
+
+.ir-icon_color_line.icon54 {
+    background-position: -71px -280px
+}
+
+.ir-icon_color_line.icon55 {
+    background-position: -139px -280px
+}
+
+.ir-icon_color_line.icon56 {
+    background-position: -210px -280px
+}
+
+.ir-icon_color_line.icon57 {
+    background-position: -280px -280px
+}
+
+.ir-icon_color_line.icon58 {
+    background-position: -350px -280px
+}
+
+.ir-icon_color_line.icon59 {
+    background-position: -420px -280px
+}
+
+.ir-icon_color_line.icon60 {
+    background-position: -490px -280px
+}
+
+.ir-icon_color_line.icon61 {
+    background-position: -560px -280px
+}
+
+.ir-icon_color_line.icon62 {
+    background-position: -630px -280px
+}
+
+.ir-icon_color_line.icon63 {
+    background-position: -700px -280px
+}
+
+.ir-icon_color_line.icon64 {
+    background-position: -770px -280px
+}
+
+.ir-icon_color_line.icon65 {
+    background-position: -840px -280px
+}
+
+.ir-icon_color_line.icon66 {
+    background-position: 0 -350px
+}
+
+.ir-icon_color_line.icon67 {
+    background-position: -71px -350px
+}
+
+.ir-icon_color_line.icon68 {
+    background-position: -139px -350px
+}
+
+.ir-icon_color_line.icon69 {
+    background-position: -210px -350px
+}
+
+.ir-icon_color_line.icon70 {
+    background-position: -280px -350px
+}
+
+.ir-icon_color_line.icon71 {
+    background-position: -350px -350px
+}
+
+.ir-icon_color_line.icon72 {
+    background-position: -420px -350px
+}
+
+.ir-icon_color_line.icon73 {
+    background-position: -490px -350px
+}
+
+.ir-icon_color_line.icon74 {
+    background-position: -560px -350px
+}
+
+.ir-icon_color_line.icon75 {
+    background-position: -630px -350px
+}
+
+.ir-icon_color_line.icon76 {
+    background-position: -700px -350px
+}
+
+.ir-icon_color_line.icon77 {
+    background-position: -770px -350px
+}
+
+.ir-icon_color_line.icon78 {
+    background-position: -840px -350px
+}
+
+.ir-icon_color_line.icon79 {
+    background-position: 0 -420px
+}
+
+.ir-icon_color_line.icon80 {
+    background-position: -71px -420px
+}
+
+.ir-icon_color_line.icon81 {
+    background-position: -139px -420px
+}
+
+.ir-icon_color_line.icon82 {
+    background-position: -210px -420px
+}
+
+.ir-icon_color_line.icon83 {
+    background-position: -280px -420px
+}
+
+.ir-icon_color_line.icon84 {
+    background-position: -350px -420px
+}
+
+.ir-icon_color_line.icon85 {
+    background-position: -420px -420px
+}
+
+.ir-icon_color_line.icon86 {
+    background-position: -490px -420px
+}
+
+.ir-icon_color_line.icon87 {
+    background-position: -560px -420px
+}
+
+.ir-icon_color_line.icon88 {
+    background-position: -630px -420px
+}
+
+.ir-icon_color_line.icon89 {
+    background-position: -700px -420px
+}
+
+.ir-icon_color_line.icon90 {
+    background-position: -770px -420px
+}
+
+.ir-icon_color_line.icon91 {
+    background-position: -840px -420px
+}
+
+.ir-icon_color_line.icon92 {
+    background-position: 0 -490px
+}
+
+.ir-icon_color_line.icon93 {
+    background-position: -71px -490px
+}
+
+.ir-icon_color_line.icon94 {
+    background-position: -139px -490px
+}
+
+.ir-icon_color_line.icon95 {
+    background-position: -210px -490px
+}
+
+.ir-icon_color_line.icon96 {
+    background-position: -280px -490px
+}
+
+.ir-icon_color_line.icon97 {
+    background-position: -350px -490px
+}
+
+.ir-icon_color_line.icon98 {
+    background-position: -420px -490px
+}
+
+.ir-icon_color_line.icon99 {
+    background-position: -490px -490px
+}
+
+.ir-icon_color_line.icon100 {
+    background-position: -560px -490px
+}
+
+.ir-icon_color_line.icon101 {
+    background-position: -630px -490px
+}
+
+.ir-icon_color_line.icon102 {
+    background-position: -700px -490px
+}
+
+.ir-icon_color_line.icon103 {
+    background-position: -770px -490px
+}
+
+.ir-icon_color_line.icon104 {
+    background-position: -840px -490px
+}
+
+.ir-icon_color_line.icon105 {
+    background-position: 0 -547px
+}
+
+.ir-icon_color_line.icon106 {
+    background-position: -74px -547px
+}
+
+.ir-icon_color_line.icon107 {
+    background-position: -144px -547px
+}
+
+.ir-icon_color_line.icon108 {
+    background-position: -213px -547px
+}
+
+.ir-icon_color_line.icon109 {
+    background-position: -283px -547px
+}
+
+.ir-icon_color_line.icon110 {
+    background-position: -353px -547px
+}
+
+.ir-icon_color_line.icon111 {
+    background-position: -426px -547px
+}
+
+.ir-icon_color_line.icon112 {
+    background-position: -493px -547px
+}
+
+.ir-icon_color_line.icon113 {
+    background-position: -563px -547px
+}
+
+.ir-icon_color_line.icon114 {
+    background-position: -633px -547px
+}
+
+.ir-icon_color_line.icon115 {
+    background-position: -703px -547px
+}
+
+
+/* process__icon */
+.ir.ui-process__icon {
+    width: 52px;
+    height: 52px;
+}
+
+.ir.ui-process__icon.icon1 {
+    background-position: 0 0;
+}
+
+.ir.ui-process__icon.icon2 {
+    background-position: -52px 0;
+}
+
+.ir.ui-process__icon.icon3 {
+    background-position: -104px 0;
+}
+
+.ir.ui-process__icon.icon4 {
+    background-position: -156px 0;
+}
+
+.ir.ui-process__icon.icon5 {
+    background-position: -208px 0;
+}
+
+.ir.ui-process__icon.icon6 {
+    background-position: -260px 0;
+}
+
+.ir.ui-process__icon.icon7 {
+    background-position: -312px 0;
+}
+
+.ir.ui-process__icon.icon8 {
+    background-position: -364px 0;
+}
+
+.ir.ui-process__icon.icon9 {
+    background-position: -416px 0;
+}
+
+.ir.ui-process__icon.icon10 {
+    background-position: -468px 0;
+}
+
+.ir.ui-process__icon.icon11 {
+    background-position: 0 -52px;
+}
+
+.ir.ui-process__icon.icon12 {
+    background-position: -52px -52px;
+}
+
+.ir.ui-process__icon.icon13 {
+    background-position: -104px -52px;
+}
+
+.ir.ui-process__icon.icon14 {
+    background-position: -156px -52px;
+}
+
+.ir.ui-process__icon.icon15 {
+    background-position: -208px -52px;
+}
+
+.ir.ui-process__icon.icon16 {
+    background-position: -260px -52px;
+}
+
+.ir.ui-process__icon.icon17 {
+    background-position: -312px -52px;
+}
+
+.ir.ui-process__icon.icon18 {
+    background-position: -364px -52px;
+}
+
+.ir.ui-process__icon.icon19 {
+    background-position: -416px -52px;
+}
+
+.ir.ui-process__icon.icon20 {
+    background-position: -468px -52px;
+}
+
+.ir.ui-process__icon.icon21 {
+    background-position: 0 -104px;
+}
+
+.ir.ui-process__icon.icon22 {
+    background-position: -52px -104px;
+}
+
+.ir.ui-process__icon.icon23 {
+    background-position: -104px -104px;
+}
+
+.ir.ui-process__icon.icon24 {
+    background-position: -156px -104px;
+}
+
+.ir.ui-process__icon.icon25 {
+    background-position: -208px -104px;
+}
+
+.ir.ui-process__icon.icon26 {
+    background-position: -260px -104px;
+}
+
+.ir.ui-process__icon.icon27 {
+    background-position: -312px -104px;
+}
+
+.ir.ui-process__icon.icon28 {
+    background-position: -364px -104px;
+}
+
+.ir.ui-process__icon.icon29 {
+    background-position: -416px -104px;
+}
+
+.ir.ui-process__icon.icon30 {
+    background-position: -468px -104px;
+}
+
+.ir.ui-process__icon.icon31 {
+    background-position: 0 -156px;
+}
+
+.ir.ui-process__icon.icon32 {
+    background-position: -52px -156px;
+}
+
+.ir.ui-process__icon.icon33 {
+    background-position: -104px -156px;
+}
+
+.ir.ui-process__icon.icon34 {
+    background-position: -156px -156px;
+}
+
+.ir.ui-process__icon.icon35 {
+    background-position: -208px -156px;
+}
+
+.ir.ui-process__icon.icon36 {
+    background-position: -260px -156px;
+}
+
+.ir.ui-process__icon.icon37 {
+    background-position: -312px -156px;
+}
+
+.ir.ui-process__icon.icon38 {
+    background-position: -364px -156px;
+}
+
+.ir.ui-process__icon.icon39 {
+    background-position: -416px -156px;
+}
+
+.ir.ui-process__icon.icon40 {
+    background-position: -468px -156px;
+}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'exo';
+  font-style: normal;
+  src: url(exo2/Exo2.0-Regular.eot);
+  /* IE 호환성 보기 */
+  src: url(exo2/Exo2.0-Regular.eot#iefix) format('embedded-opentype'),
+    /* IE 6 ~ 8 */
+    url(exo2/Exo2.0-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'exo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(exo2/Exo2.0-Regular.eot);
+  /* IE 호환성 보기 */
+  src: url(exo2/Exo2.0-Regular.eot#iefix) format('embedded-opentype'),
+    /* IE 6 ~ 8 */
+    url(exo2/Exo2.0-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'exo';
+  font-style: normal;
+  font-weight: 700;
+  src: url(exo2/Exo2.0-Bold.eot);
+  /* IE 호환성 보기 */
+  src: url(exo2/Exo2.0-Bold.eot#iefix) format('embedded-opentype'),
+    /* IE 6 ~ 8 */
+    url(exo2/Exo2.0-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'exo-black';
+  font-style: normal;
+  font-weight: 700;
+  src: url(exo2/Exo2.0-Black.eot);
+  /* IE 호환성 보기 */
+  src: url(exo2/Exo2.0-Black.eot#iefix) format('embedded-opentype'),
+    /* IE 6 ~ 8 */
+    url(exo2/Exo2.0-Black.woff) format('woff');
+}
+
+.exo {
+  font-family: "exo", Arial, arial, Sans-serif;
+  font-weight: 400;
+}
